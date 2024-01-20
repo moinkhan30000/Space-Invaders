@@ -1,0 +1,97 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class MainGameClass_SpaceInvaders
+{
+    private static Dimension screenSize;
+	private static double width;
+	private static double height;
+
+	private static final int WIDTH;
+	private static final int HEIGHT;
+
+	private static final String TITLE;
+
+	private GameStateManager gsm;
+	public static SpriteBatch batch;
+
+	private Music menuMusic;
+
+
+	public void create ()
+
+
+    public void render ()
+
+    public void dispose()
+
+    Getters&Setters()
+
+
+
+}
+
+class State
+{
+
+    protected OrthographicCamera cam;
+    protected Vector3 mouse;
+    protected GameStateManager gsm;
+
+     protected abstract void handleInput();
+        public abstract void update(float dt);
+        public abstract void render(SpriteBatch sb);
+        public abstract void dispose();
+}
+
+class credit extends State
+{
+protected void handleInput()
+
+
+    public void update(float dt)
+
+    public void render(SpriteBatch sb)
+
+
+    public void dispose()
+}
+
+class GameStateManager
+{
+private Stack<State> states;
+
+    public GameStateManager()
+
+    public void push(State state)
+
+    public void pop()
+
+}
+
+class playState extends State
+{
+    private static final int particleCount;
+    private static final int enemyCount;
+    private static final int pwCount;
+    private static Texture exhaust;
+    private static int exhaustHeight;
+
+    public primaryWeaponMechanics pwmObj;
+    public static int enemyShipCount;
+
+    public static SpaceShip protagonist;
+    private Texture bg_playState;
+
+    private particles obj;
+    private enemyShips enemiesObj;
+    private hud hudObj;
+    private BitmapFont font;
+    private Texture hudContainer;
+    private Texture weaponHUD;
+    private regenerateHealth regObj;
+    static private int flag;
+    static private int orientationFlag;
+    static private int pwFlag;
+    static private int isInvincible;
+}

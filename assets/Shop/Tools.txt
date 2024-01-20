@@ -1,0 +1,9 @@
+Currency-0
+ShipLevel-1
+PrimaryWeapon1-1
+PrimaryWeapon2-1
+SecondaryWeapon1-1
+SecondaryWeapon2-1
+Ability1Count-0
+Ability2Count-0
+Ability3Count-0
